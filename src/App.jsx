@@ -6,6 +6,9 @@ function App() {
       <div>
         <Button>Click me</Button>
       </div>
+      <div>
+        <Button>second click me</Button>
+      </div>
     </div>
   );
 }
