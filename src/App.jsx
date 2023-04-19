@@ -4,7 +4,9 @@ function App() {
   return (
     <div className="App">
       <div>
-        <Button>Click me</Button>
+        <Button success rounded outline>
+          Click me
+        </Button>
       </div>
       <div>
         <Button>second click me</Button>
