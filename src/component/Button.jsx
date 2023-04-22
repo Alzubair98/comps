@@ -19,13 +19,13 @@ const Button = ({
     "bg-red-500 broder-red-500 text-white": danger,
     // rounded
     "rounded-full": rounded,
-    "bg-white outline-8": outline,
     // outline
+    "bg-white": outline,
     "text-blue-500": outline && primary,
     "text-red-500": outline && danger,
     "text-gray-900": outline && secondary,
     "text-green-500": outline && success,
-    "text-yellow-500": outline && warning,
+    "text-yellow-400": outline && warning,
   });
 
   return <button className={classes}>{children}</button>;
