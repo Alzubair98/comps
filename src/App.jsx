@@ -11,6 +11,15 @@ function App() {
       <div>
         <Button primary>second click me</Button>
       </div>
+      <div>
+        <Button warning>second click me</Button>
+      </div>
+      <div>
+        <Button danger>second click me</Button>
+      </div>
+      <div>
+        <Button secondary>second click me</Button>
+      </div>
     </div>
   );
 }

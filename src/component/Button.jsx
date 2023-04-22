@@ -13,6 +13,9 @@ const Button = ({
 }) => {
   const classes = className("px-3 py-1.5 border", {
     "bg-blue-500 broder-blue-500 text-white": primary,
+    "bg-gray-900 broder-gray-900 text-white": secondary,
+    "bg-green-500 broder-green-500 text-white": success,
+    "bg-yellow-400 broder-yellow-400 text-white": warning,
     "bg-red-500 broder-red-500 text-white": danger,
   });
 
