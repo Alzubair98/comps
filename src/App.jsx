@@ -9,7 +9,7 @@ function App() {
         </Button>
       </div>
       <div>
-        <Button>second click me</Button>
+        <Button primary>second click me</Button>
       </div>
     </div>
   );
