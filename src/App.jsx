@@ -5,7 +5,8 @@ function App() {
   const items = [
     {
       label: "can i use angular",
-      content: "no you cant",
+      content:
+        "no you cant,no you cant,no you cant,no you cant,no you cant,no you cant,no you cant,no you cant",
     },
     {
       label: "can i use React",
@@ -18,7 +19,7 @@ function App() {
   ];
   return (
     <div className="App">
-      <Accordion />
+      <Accordion items={items} />
     </div>
   );
 }
