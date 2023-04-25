@@ -2,13 +2,10 @@ import Button from "./component/Button.jsx";
 import { GoBell, GoCloudDownload, GoDatabase } from "react-icons/go";
 
 function App() {
-  const handleClick = () => {
-    console.log("yes");
-  };
   return (
     <div className="App">
       <div>
-        <Button rounded success onClick={handleClick}>
+        <Button rounded success>
           Click me <GoBell />
         </Button>
       </div>
