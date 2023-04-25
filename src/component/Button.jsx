@@ -10,6 +10,11 @@ const Button = ({
   danger,
   outline,
   rounded,
+  outblue,
+  outblack,
+  outgreen,
+  outyellow,
+  outred,
 }) => {
   const classes = className("px-3 py-1.5 border", {
     "bg-blue-500 broder-blue-500 text-white": primary,
@@ -21,11 +26,11 @@ const Button = ({
     "rounded-full": rounded,
     // outline
     "bg-white": outline,
-    "text-blue-500": outline && primary,
-    "text-gray-90": outline && secondary,
-    "text-green-500": outline && success,
-    "text-yellow-400": outline && warning,
-    "text-red-500": outline && danger,
+    "text-blue-500 border-blue-500": outblue,
+    "text-gray-900 border-gray-900": outblack,
+    "text-green-500 border-green-500": outgreen,
+    "text-yellow-400 border-yellow-400": outyellow,
+    "text-red-500 border-red-500": outred,
   });
 
   return <button className={classes}>{children}</button>;

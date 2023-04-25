@@ -18,9 +18,7 @@ function App() {
         <Button danger>second click me</Button>
       </div>
       <div>
-        <Button outline primary>
-          second click me
-        </Button>
+        <Button outred>second click me</Button>
       </div>
       <div>
         <Button rounded outline>
