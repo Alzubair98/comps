@@ -16,7 +16,7 @@ const Button = ({
   outyellow,
   outred,
 }) => {
-  const classes = className("px-3 py-1.5 border", {
+  const classes = className("flex items-center gap-1 px-3 py-1.5 border", {
     "bg-blue-500 broder-blue-500 text-white": primary,
     "bg-gray-900 broder-gray-900 text-white": secondary,
     "bg-green-500 broder-green-500 text-white": success,
