@@ -22,10 +22,10 @@ const Button = ({
     // outline
     "bg-white": outline,
     "text-blue-500": outline && primary,
-    "text-red-500": outline && danger,
-    "text-gray-900": outline && secondary,
+    "text-gray-90": outline && secondary,
     "text-green-500": outline && success,
     "text-yellow-400": outline && warning,
+    "text-red-500": outline && danger,
   });
 
   return <button className={classes}>{children}</button>;

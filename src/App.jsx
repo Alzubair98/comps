@@ -15,12 +15,10 @@ function App() {
         <Button warning>second click me</Button>
       </div>
       <div>
-        <Button danger outline>
-          second click me
-        </Button>
+        <Button danger>second click me</Button>
       </div>
       <div>
-        <Button secondary rounded>
+        <Button outline primary>
           second click me
         </Button>
       </div>
