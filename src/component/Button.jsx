@@ -15,6 +15,7 @@ const Button = ({
   outgreen,
   outyellow,
   outred,
+  ...rest
 }) => {
   const classes = className("flex items-center gap-1 px-3 py-1.5 border", {
     "bg-blue-500 broder-blue-500 text-white": primary,
@@ -33,7 +34,11 @@ const Button = ({
     "text-red-500 border-red-500": outred,
   });
 
-  return <button className={classes}>{children}</button>;
+  return (
+    <button {...rest} className={classes}>
+      {children}
+    </button>
+  );
 };
 
 Button.propTypes = {
