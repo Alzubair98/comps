@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Accordion = ({ items }) => {
+  const [expandedIndex, setExpandedIndex] = useState(0);
   return (
     <div>
       {items.map((item, index) => {
