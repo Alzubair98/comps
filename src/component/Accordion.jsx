@@ -28,7 +28,11 @@ const Accordion = ({ items }) => {
             >
               {item.label}{" "}
               <span className="text-2xl">
-                {isExpanded ? <GoChevronDown /> : <GoChevronRight />}
+                {isExpanded ? (
+                  <GoChevronDown className="text-blue-500" />
+                ) : (
+                  <GoChevronRight />
+                )}
               </span>
             </div>
             {isExpanded && (
