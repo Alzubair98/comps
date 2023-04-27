@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { GoChevronDown, GoChevronRight } from "react-icons/go";
 
 const Accordion = ({ items }) => {
-  const [expandedIndex, setExpandedIndex] = useState(0);
+  const [expandedIndex, setExpandedIndex] = useState(-1);
 
   return (
     <div>
@@ -14,7 +14,9 @@ const Accordion = ({ items }) => {
             <div
               className="flex justify-between gap-1 p-3 bg-gray-50 border-b items-center cursor-pointer"
               onClick={() => {
-                setExpandedIndex(index);
+                expandedIndex === index
+                  ? setExpandedIndex(-1)
+                  : setExpandedIndex(index);
               }}
             >
               {item.label}{" "}
