@@ -14,9 +14,16 @@ const Accordion = ({ items }) => {
             <div
               className="flex justify-between gap-1 p-3 bg-gray-50 border-b items-center cursor-pointer"
               onClick={() => {
-                expandedIndex === index
-                  ? setExpandedIndex(-1)
-                  : setExpandedIndex(index);
+                setExpandedIndex((currentExpandedIndex) => {
+                  if (currentExpandedIndex === index) {
+                    return -1;
+                  } else {
+                    return index;
+                  }
+                });
+                // expandedIndex === index
+                //   ? setExpandedIndex(-1)
+                //   : setExpandedIndex(index);
               }}
             >
               {item.label}{" "}
