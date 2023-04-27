@@ -10,21 +10,21 @@ const Accordion = ({ items }) => {
         const isExpanded = index === expandedIndex;
 
         return (
-          <div key={index}>
+          <div key={index} className="border-x border-t rounded">
             <div
-              className="flex gap-1"
+              className="flex justify-between gap-1 p-3 bg-gray-50 border-b items-center cursor-pointer"
               onClick={() => {
                 setExpandedIndex(index);
               }}
             >
               {item.label}{" "}
-              {isExpanded ? (
-                <GoChevronDown className="mt-1" />
-              ) : (
-                <GoChevronRight className="mt-1" />
-              )}
+              <span className="text-2xl">
+                {isExpanded ? <GoChevronDown /> : <GoChevronRight />}
+              </span>
             </div>
-            {isExpanded && <div>{item.content} </div>}
+            {isExpanded && (
+              <div className=" p-5 border-b ">{item.content} </div>
+            )}
           </div>
         );
       })}
