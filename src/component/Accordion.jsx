@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AiFillCaretDown, AiFillCaretRight } from "react-icons/ai";
+import { GoChevronDown, GoChevronRight } from "react-icons/go";
 
 const Accordion = ({ items }) => {
   const [expandedIndex, setExpandedIndex] = useState(0);
@@ -16,8 +16,7 @@ const Accordion = ({ items }) => {
                 setExpandedIndex(index);
               }}
             >
-              {item.label}{" "}
-              {isExpanded ? <AiFillCaretDown /> : <AiFillCaretRight />}
+              {item.label} {isExpanded ? <GoChevronDown /> : <GoChevronRight />}
             </div>
             {isExpanded && <div>{item.content} </div>}
           </div>
