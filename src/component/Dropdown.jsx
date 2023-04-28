@@ -3,7 +3,6 @@ import { GoChevronDown } from "react-icons/go";
 
 const Dropdown = ({ options, value, handleClick }) => {
   const [down, setDown] = useState(false);
-  //   const [value, setValue] = useState("Select..");
 
   return (
     <>
