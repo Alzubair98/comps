@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { GoChevronDown } from "react-icons/go";
 
-const Dropdown = ({ options }) => {
+const Dropdown = ({ options, value, handleClick }) => {
   const [down, setDown] = useState(false);
-  const [value, setValue] = useState("Select..");
+  //   const [value, setValue] = useState("Select..");
 
   return (
     <>
@@ -24,7 +24,7 @@ const Dropdown = ({ options }) => {
           <span
             onClick={() => {
               setDown(!down);
-              setValue("Select..");
+              handleClick("Select..");
             }}
           >
             Select..
@@ -35,7 +35,7 @@ const Dropdown = ({ options }) => {
                 key={index}
                 onClick={() => {
                   setDown(!down);
-                  setValue(option.value);
+                  handleClick(option.value);
                 }}
               >
                 {option.lable}
