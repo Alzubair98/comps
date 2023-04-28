@@ -1,7 +1,11 @@
-import AccordionPage from "./pages/AccordionPage.jsx";
+import Dropdown from "./component/Dropdown.jsx";
 
 function App() {
-  return <div className="App">hi</div>;
+  return (
+    <div className="App">
+      <Dropdown />
+    </div>
+  );
 }
 
 export default App;
