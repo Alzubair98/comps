@@ -12,7 +12,7 @@ const Dropdown = ({ options, value, handleClick }) => {
           setIsOpen(!isOpen);
         }}
       >
-        {value || "Select..."}
+        {value?.lable || "Select..."}
         <GoChevronDown
           className={isOpen ? "text-2xl text-blue-500" : "text-2xl"}
         />
@@ -34,7 +34,7 @@ const Dropdown = ({ options, value, handleClick }) => {
                 key={index}
                 onClick={() => {
                   setIsOpen(!isOpen);
-                  handleClick(option.value);
+                  handleClick(option);
                 }}
               >
                 {option.lable}

@@ -10,9 +10,9 @@ function App() {
   };
 
   const options = [
-    { lable: "red", value: "red" },
-    { lable: "blue", value: "blue" },
-    { lable: "green", value: "green" },
+    { lable: "redddd", value: "red" },
+    { lable: "blueee", value: "blue" },
+    { lable: "greennn", value: "green" },
   ];
   return (
     <div className="App">
