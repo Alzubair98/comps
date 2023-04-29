@@ -5,7 +5,7 @@ const Dropdown = ({ options, value, onChange }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <>
+    <div className="w-48 relative">
       <div
         className="mt-5 ml-5 mr-5 p-2 border rounded cursor-pointer flex justify-between items-center shadow"
         onClick={() => {
@@ -19,18 +19,20 @@ const Dropdown = ({ options, value, onChange }) => {
       </div>
 
       {isOpen && (
-        <div className="hover:bg-sky-100 shadow rounded cursor-pointer pl-3 ml-5 mr-5 bg-gray-50 border-l border-r border-b cursor-pointer">
-          <span
+        <div className="shadow rounded cursor-pointer pl-3 ml-5 mr-5 bg-gray-50 border-l border-r border-b cursor-pointer">
+          <div
+            className="hover:bg-sky-100 "
             onClick={() => {
               setIsOpen(!isOpen);
               onChange(null);
             }}
           >
             Select..
-          </span>
+          </div>
           {options.map((option, index) => {
             return (
               <div
+                className="hover:bg-sky-100"
                 key={index}
                 onClick={() => {
                   setIsOpen(!isOpen);
@@ -43,7 +45,7 @@ const Dropdown = ({ options, value, onChange }) => {
           })}
         </div>
       )}
-    </>
+    </div>
   );
 };
 
