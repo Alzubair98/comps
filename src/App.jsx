@@ -2,7 +2,8 @@ import Dropdown from "./component/Dropdown.jsx";
 import { useState } from "react";
 
 function App() {
-  const [value, setValue] = useState("Select item");
+  const [value, setValue] = useState(null);
+  console.log(value);
 
   const handleClick = (item) => {
     setValue(item);
