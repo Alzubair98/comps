@@ -12,7 +12,7 @@ const Dropdown = ({ options, value, handleClick }) => {
           setIsOpen(!isOpen);
         }}
       >
-        {value || "Select .."}
+        {value || "Select..."}
         <GoChevronDown
           className={isOpen ? "text-2xl text-blue-500" : "text-2xl"}
         />
