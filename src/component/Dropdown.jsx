@@ -27,7 +27,7 @@ const Dropdown = ({ options, value, onChange }) => {
               onChange(null);
             }}
           >
-            Select..
+            Select...
           </div>
           {options.map((option, index) => {
             return (
