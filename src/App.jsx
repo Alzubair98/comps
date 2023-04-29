@@ -16,7 +16,7 @@ function App() {
   ];
   return (
     <div className="App">
-      <Dropdown options={options} value={value} handleClick={handleClick} />
+      <Dropdown options={options} value={value} onChange={handleClick} />
     </div>
   );
 }
