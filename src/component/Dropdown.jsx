@@ -7,7 +7,7 @@ const Dropdown = ({ options, value, onChange }) => {
   return (
     <div className="w-48 relative">
       <div
-        className=" p-2 border rounded cursor-pointer flex justify-between items-center shadow"
+        className="p-2 border rounded cursor-pointer flex justify-between items-center shadow"
         onClick={() => {
           setIsOpen(!isOpen);
         }}
@@ -19,7 +19,7 @@ const Dropdown = ({ options, value, onChange }) => {
       </div>
 
       {isOpen && (
-        <div className="shadow rounded cursor-pointer pl-3 bg-gray-50 border-l border-r border-b cursor-pointer">
+        <div className="shadow rounded cursor-pointer p-2 bg-gray-50 border-l border-r border-b cursor-pointer">
           <div
             className="hover:bg-sky-100 "
             onClick={() => {
