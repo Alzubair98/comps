@@ -19,7 +19,7 @@ const Dropdown = ({ options, value, onChange }) => {
       </div>
 
       {isOpen && (
-        <div className="hover:bg-sky-100 rounded cursor-pointer pl-3 ml-5 mr-5 bg-gray-50 border-l border-r border-b cursor-pointer">
+        <div className="hover:bg-sky-100 shadow rounded cursor-pointer pl-3 ml-5 mr-5 bg-gray-50 border-l border-r border-b cursor-pointer">
           <span
             onClick={() => {
               setIsOpen(!isOpen);
