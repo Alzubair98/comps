@@ -20,7 +20,7 @@ const Dropdown = ({ options, value, onChange }) => {
       </Panel>
 
       {isOpen && (
-        <Panel className="shadow rounded cursor-pointer bg-gray-50 border cursor-pointer">
+        <Panel className="shadow rounded cursor-pointer bg-gray-50 border cursor-pointer absolute w-full">
           <div
             className="hover:bg-sky-100 "
             onClick={() => {
