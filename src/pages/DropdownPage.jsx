@@ -14,11 +14,7 @@ const DropdownPage = () => {
     { lable: "blueee", value: "blue" },
     { lable: "greennn", value: "green" },
   ];
-  return (
-    <div>
-      <Dropdown options={options} value={value} onChange={handleClick} />
-    </div>
-  );
+  return <Dropdown options={options} value={value} onChange={handleClick} />;
 };
 
 export default DropdownPage;
