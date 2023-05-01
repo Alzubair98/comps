@@ -19,7 +19,7 @@ const Dropdown = ({ options, value, onChange }) => {
       </div>
 
       {isOpen && (
-        <div className="shadow rounded cursor-pointer p-2 bg-gray-50 border-l border-r border-b cursor-pointer">
+        <div className="shadow rounded cursor-pointer p-2 bg-gray-50 border cursor-pointer">
           <div
             className="hover:bg-sky-100 "
             onClick={() => {
