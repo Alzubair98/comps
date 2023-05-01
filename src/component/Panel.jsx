@@ -2,9 +2,13 @@ import React from "react";
 import classNames from "classnames";
 
 const Panel = ({ children, className, ...rest }) => {
-  const finalClassNames = classNames("border rounded shadow", className);
+  const finalClassNames = classNames("border rounded shadow p-2", className);
 
-  return <div {...rest} className={finalClassNames}></div>;
+  return (
+    <div {...rest} className={finalClassNames}>
+      {children}
+    </div>
+  );
 };
 
 export default Panel;
