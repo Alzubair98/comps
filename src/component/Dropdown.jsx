@@ -7,8 +7,12 @@ const Dropdown = ({ options, value, onChange }) => {
   const divEl = useRef();
 
   useEffect(() => {
-    const handler = (event) => {
-      console.log(divEl);
+    const handler = (e) => {
+      // if (!divEl.current.contains(e.target)) {
+      //   setIsOpen(false);
+      // }
+
+      !divEl.current.contains(e.target) && setIsOpen(false); //easy if statment
     };
     document.addEventListener("click", handler, true);
 
