@@ -3,7 +3,6 @@ import Dropdown from "../component/Dropdown";
 
 const DropdownPage = () => {
   const [value, setValue] = useState(null);
-  console.log(value);
 
   const handleClick = (item) => {
     setValue(item);
