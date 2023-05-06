@@ -1,7 +1,5 @@
-import DropdownPage from "./pages/DropdownPage.jsx";
-
 function App() {
-  return <div className="App flex"></div>;
+  return <div className="App flex">hi</div>;
 }
 
 export default App;
