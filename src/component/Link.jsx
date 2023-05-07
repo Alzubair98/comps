@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import NavigationContext from "../context/navigation";
 
 const Link = ({ to, children }) => {
+  const { navigate } = useContext(NavigationContext);
   return (
     <a
       onClick={(e) => {
         e.preventDefault();
-        console.log("user navigating to:", to);
+        navigate(to);
       }}
       href={to}
     >
