@@ -6,6 +6,9 @@ const Link = ({ to, children }) => {
   return (
     <a
       onClick={(e) => {
+        if (e.metaKey || e.ctrlKey) {
+          return;
+        }
         e.preventDefault();
         navigate(to);
       }}
