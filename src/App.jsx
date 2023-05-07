@@ -7,8 +7,16 @@ function App() {
     <div className="App ">
       <Link to="/dashborad">dashborad</Link>
       <br />
-
-      <Link to="/accordion">accordion</Link>
+      <Link to="/accordion">accordion</Link> <br />
+      <Link to="/dropdown">dropdown</Link>
+      <div>
+        <Route path="/accordion">
+          <AccordionPage />
+        </Route>
+        <Route path="/dropdown">
+          <DropdownPage />
+        </Route>
+      </div>
     </div>
   );
 }
