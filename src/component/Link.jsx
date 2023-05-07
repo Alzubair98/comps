@@ -1,6 +1,6 @@
 import React from "react";
 
-const Link = ({ to }) => {
+const Link = ({ to, children }) => {
   return (
     <a
       onClick={(e) => {
@@ -9,7 +9,7 @@ const Link = ({ to }) => {
       }}
       href={to}
     >
-      Click
+      {children}
     </a>
   );
 };
