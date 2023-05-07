@@ -13,3 +13,5 @@ const Link = ({ to }) => {
     </a>
   );
 };
+
+export default Link;
