@@ -1,7 +1,14 @@
-import { createContext } from "react";
+import { Children, createContext } from "react";
 
 const NavigationContext = createContext();
 
-const NavigationProvider = () => {};
+const NavigationProvider = ({ children }) => {
+  return (
+    <NavigationContext.Provider value={{}}>
+      {children}
+    </NavigationContext.Provider>
+  );
+};
 
+export { NavigationProvider };
 export default NavigationContext;
