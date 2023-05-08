@@ -8,7 +8,7 @@ const Sidebar = () => {
     { label: "buttons", path: "/buttons" },
   ];
   return (
-    <div className="sticky top-0 flex flex-col">
+    <div className="sticky top-0 flex flex-col items-start">
       {links.map((link) => {
         return (
           <Link
