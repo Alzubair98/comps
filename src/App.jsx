@@ -6,9 +6,9 @@ import Sidebar from "./component/Sidebar.jsx";
 import ButtonPage from "./pages/ButtonPage.jsx";
 function App() {
   return (
-    <div className="App ">
+    <div className="App container mx-auto grid grid-cols-6 gap-4 mt-4">
       <Sidebar />
-      <div>
+      <div className="col-span-5">
         <Route path="/accordion">
           <AccordionPage />
         </Route>
