@@ -11,7 +11,12 @@ const Sidebar = () => {
     <div className="sticky top-0 flex flex-col">
       {links.map((link) => {
         return (
-          <Link className="mb-3" key={link.label} to={link.path}>
+          <Link
+            className="mb-3"
+            activeClassName="font-bold border-l-4 border-blue-500 pl-2 "
+            key={link.label}
+            to={link.path}
+          >
             {link.label}
           </Link>
         );
