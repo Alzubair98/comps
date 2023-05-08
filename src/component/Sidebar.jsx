@@ -8,10 +8,10 @@ const Sidebar = () => {
     { label: "buttons", path: "/buttons" },
   ];
   return (
-    <div className="sticky top-0  flex flex-col">
+    <div className="sticky top-0 flex flex-col">
       {links.map((link) => {
         return (
-          <Link key={link.label} to={link.path}>
+          <Link className="mb-3" key={link.label} to={link.path}>
             {link.label}
           </Link>
         );
