@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "../component/Modal";
 
-const ModaPage = () => {
+const ModalPage = () => {
   return (
     <div>
       <Modal />
@@ -9,4 +9,4 @@ const ModaPage = () => {
   );
 };
 
-export default ModaPage;
+export default ModalPage;
