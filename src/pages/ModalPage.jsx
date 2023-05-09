@@ -5,6 +5,10 @@ import Button from "../component/Button";
 const ModalPage = () => {
   const [showModal, setShowModal] = useState(false);
 
+  const onClose = (input) => {
+    setShowModal(input);
+  };
+
   return (
     <div>
       <Button
@@ -16,7 +20,7 @@ const ModalPage = () => {
       >
         Open Modal
       </Button>
-      {showModal && <Modal />}
+      {showModal && <Modal onClose={onClose} />}
     </div>
   );
 };
