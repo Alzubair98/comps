@@ -5,8 +5,8 @@ import Button from "../component/Button";
 const ModalPage = () => {
   const [showModal, setShowModal] = useState(false);
 
-  const onClose = (input) => {
-    setShowModal(input);
+  const onClose = () => {
+    setShowModal(false);
   };
 
   return (

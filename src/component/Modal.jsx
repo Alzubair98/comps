@@ -7,7 +7,7 @@ const Modal = ({ onClose }) => {
     <div>
       <div
         onClick={() => {
-          onClose(false);
+          onClose();
         }}
         className="absolute inset-0 bg-gray-300 opacity-80"
       ></div>
@@ -15,7 +15,7 @@ const Modal = ({ onClose }) => {
         im a modal{" "}
         <Button
           onClick={() => {
-            onClose(false);
+            onClose();
           }}
           danger
           rounded
