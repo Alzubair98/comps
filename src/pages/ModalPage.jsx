@@ -10,7 +10,7 @@ const ModalPage = () => {
   };
 
   return (
-    <div>
+    <div className="relative">
       <Button
         onClick={() => {
           setShowModal(true);
