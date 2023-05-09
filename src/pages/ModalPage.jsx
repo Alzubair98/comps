@@ -20,7 +20,18 @@ const ModalPage = () => {
       >
         Open Modal
       </Button>
-      {showModal && <Modal onClose={onClose} />}
+      {showModal && (
+        <Modal
+          actionBar={
+            <Button onClick={onClose} danger rounded>
+              Close
+            </Button>
+          }
+          onClose={onClose}
+        >
+          <p>im testing this as a children of this modal</p>
+        </Modal>
+      )}
     </div>
   );
 };
