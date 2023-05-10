@@ -5,6 +5,10 @@ import { useEffect } from "react";
 const Modal = ({ onClose, children, actionBar }) => {
   useEffect(() => {
     document.body.classList.add("overflow-hidden");
+
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
   }, []);
 
   return ReactDOM.createPortal(
