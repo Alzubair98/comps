@@ -8,11 +8,9 @@ const Table = ({ data, config }) => {
   const renderRows = data.map((fruit) => {
     return (
       <tr className="border-b" key={fruit.name}>
-        <td className="p-3">{config[0].render(fruit)}</td>
-        <td className="p-3">
-          <div>{config[1].render(fruit)}</div>
-        </td>
-        <td className="p-3">{config[2].render(fruit)}</td>
+        {config.map((column, index) => {
+          return <td key={index}>{column.render(fruit)}</td>;
+        })}
       </tr>
     );
   });
