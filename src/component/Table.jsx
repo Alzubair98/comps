@@ -1,6 +1,15 @@
 import React from "react";
 
 const Table = ({ data }) => {
+  const renderRows = data.map((fruit) => {
+    return (
+      <tr>
+        <td>{fruit.name}</td>
+        <td>{fruit.color}</td>
+        <td>{fruit.score}</td>
+      </tr>
+    );
+  });
   return (
     <table>
       <thead>
@@ -10,7 +19,7 @@ const Table = ({ data }) => {
           <th>Score</th>
         </tr>
       </thead>
-      <tbody></tbody>
+      <tbody>{renderRows}</tbody>
     </table>
   );
 };
