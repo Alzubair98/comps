@@ -5,13 +5,13 @@ const Table = ({ data, config }) => {
     return <th key={column.label}>{column.label}</th>;
   });
 
-  const renderRows = data.map((fruit) => {
+  const renderRows = data.map((rowData, index) => {
     return (
-      <tr className="border-b" key={fruit.name}>
-        {config.map((column) => {
+      <tr className="border-b" key={index}>
+        {config.map((column, index) => {
           return (
             <td className="p-2" key={column.label}>
-              {column.render(fruit)}
+              {column.render(rowData)}
             </td>
           );
         })}
