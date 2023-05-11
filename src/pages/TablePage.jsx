@@ -25,7 +25,7 @@ const TablePage = () => {
     },
   ];
 
-  const config = [{}];
+  const config = [{ label: "Fruits" }, { label: "Color" }, { label: "Score" }];
 
   return <Table data={data} config={config} />;
 };
