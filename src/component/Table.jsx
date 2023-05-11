@@ -8,12 +8,17 @@ const Table = ({ data, config }) => {
   const renderRows = data.map((fruit) => {
     return (
       <tr className="border-b" key={fruit.name}>
-        {config.map((column, index) => {
-          return <td key={index}>{column.render(fruit)}</td>;
+        {config.map((column) => {
+          return (
+            <td className="p-2" key={column.label}>
+              {column.render(fruit)}
+            </td>
+          );
         })}
       </tr>
     );
   });
+
   return (
     <table className="table-auto border-spacing-2">
       <thead>
