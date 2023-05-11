@@ -5,9 +5,9 @@ const Sidebar = () => {
   const links = [
     { label: "Dropdown", path: "/" },
     { label: "Accordion", path: "/accordion" },
-    { label: "buttons", path: "/buttons" },
-    { label: "modal", path: "/modal" },
-    { label: "table", path: "/table" },
+    { label: "Buttons", path: "/buttons" },
+    { label: "Modal", path: "/modal" },
+    { label: "Table", path: "/table" },
   ];
   return (
     <div className="sticky top-0 flex flex-col items-start">
