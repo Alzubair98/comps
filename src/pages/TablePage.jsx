@@ -25,7 +25,9 @@ const TablePage = () => {
     },
   ];
 
-  return <Table data={data} />;
+  const config = [{}];
+
+  return <Table data={data} config={config} />;
 };
 
 export default TablePage;
