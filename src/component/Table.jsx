@@ -8,7 +8,7 @@ const Table = ({ data, config }) => {
   const renderRows = data.map((rowData, index) => {
     return (
       <tr className="border-b" key={index}>
-        {config.map((column, index) => {
+        {config.map((column) => {
           return (
             <td className="p-2" key={column.label}>
               {column.render(rowData)}
