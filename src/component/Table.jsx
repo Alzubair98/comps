@@ -2,6 +2,10 @@ import React from "react";
 
 const Table = ({ data, config }) => {
   const renderdHedaers = config.map((column) => {
+    if (column.header) {
+      return column.header();
+    }
+
     return <th key={column.label}>{column.label}</th>;
   });
 
