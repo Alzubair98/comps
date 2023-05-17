@@ -1,10 +1,19 @@
 import Table from "./Table";
+import { useState } from "react";
 
 const SortableTable = (props) => {
+  const [sortOrder, setSortOrder] = useState(null);
+  const [sortBy, setSortBy] = useState(null);
   const { config } = props;
 
   const handleClick = (label) => {
-    console.log(label);
+    if (sortOrder === null) {
+      setSortOrder("asc");
+    } else if (sortOrder === "asc") {
+      setSortOrder("desc");
+    } else if (sortOrder === "desc") {
+      setSortOrder(null);
+    }
   };
 
   const updatedConfig = config.map((column) => {
