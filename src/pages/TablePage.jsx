@@ -1,5 +1,6 @@
 import React from "react";
 import Table from "../component/Table";
+import SortableTable from "../component/SortableTable";
 
 const TablePage = () => {
   const data = [
@@ -38,7 +39,7 @@ const TablePage = () => {
     },
   ];
 
-  return <Table data={data} config={config} />;
+  return <SortableTable data={data} config={config} />;
 };
 
 export default TablePage;
