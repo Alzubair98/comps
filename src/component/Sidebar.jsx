@@ -8,6 +8,7 @@ const Sidebar = () => {
     { label: "Buttons", path: "/buttons" },
     { label: "Modal", path: "/modal" },
     { label: "Table", path: "/table" },
+    { label: "Counter", path: "/counter" },
   ];
   return (
     <div className="sticky top-0 flex flex-col items-start">
