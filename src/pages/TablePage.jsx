@@ -1,5 +1,4 @@
 import React from "react";
-import Table from "../component/Table";
 import SortableTable from "../component/SortableTable";
 
 const TablePage = () => {
