@@ -9,40 +9,38 @@ const ADD_ALOT = "add-alot";
 const REMOVE_ALOT = "remove-alot";
 
 const reducer = (state, action) => {
-  if (action.type === INCREMENT_COUNT) {
-    return {
-      ...state,
-      count: state.count + 1,
-    };
-  }
-  if (action.type === DECREMENT_COUNT) {
-    return {
-      ...state,
-      count: state.count - 1,
-    };
-  }
-  if (action.type === CHANGE_VALUE) {
-    return {
-      ...state,
-      valueToAdd: action.payload,
-    };
-  }
-  if (action.type === ADD_ALOT) {
-    return {
-      ...state,
-      count: state.count + action.payload,
-      valueToAdd: 0,
-    };
-  }
-  if (action.type === REMOVE_ALOT) {
-    return {
-      ...state,
-      count: state.count - action.payload,
-      valueToAdd: 0,
-    };
-  }
+  switch (action.type) {
+    case INCREMENT_COUNT:
+      return {
+        ...state,
+        count: state.count + 1,
+      };
+    case DECREMENT_COUNT:
+      return {
+        ...state,
+        count: state.count - 1,
+      };
+    case CHANGE_VALUE:
+      return {
+        ...state,
+        valueToAdd: action.payload,
+      };
+    case ADD_ALOT:
+      return {
+        ...state,
+        count: state.count + action.payload,
+        valueToAdd: 0,
+      };
+    case REMOVE_ALOT:
+      return {
+        ...state,
+        count: state.count - action.payload,
+        valueToAdd: 0,
+      };
 
-  return state;
+    default:
+      return state;
+  }
 };
 
 const CounterPage = ({ initialCount }) => {
