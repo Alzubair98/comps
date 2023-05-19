@@ -1,5 +1,5 @@
 import Button from "../component/Button";
-import { useState, useReducer } from "react";
+import { useReducer } from "react";
 import Panel from "../component/Panel";
 
 const reducer = (state, action) => {
@@ -8,12 +8,28 @@ const reducer = (state, action) => {
       ...state,
       count: state.count + 1,
     };
-  } else if (action.type === "decrement-count") {
+  }
+  if (action.type === "decrement-count") {
     return {
       ...state,
       count: state.count - 1,
     };
   }
+  if (action.type === "change-value") {
+    return {
+      ...state,
+      valueToAdd: action.payload,
+    };
+  }
+  if (action.type === "update-count") {
+    return {
+      ...state,
+      count: state.count + action.payload,
+      valueToAdd: 0,
+    };
+  }
+
+  return state;
 };
 
 const CounterPage = ({ initialCount }) => {
@@ -43,12 +59,21 @@ const CounterPage = ({ initialCount }) => {
   const handleChange = (event) => {
     const value = parseInt(event.target.value) || 0;
     //setValueToAdd(value);
+    dispatch({
+      type: "change-value",
+      payload: value,
+    });
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     //setCount(count + valueToAdd);
     //setValueToAdd(0);
+
+    dispatch({
+      type: "update-count",
+      payload: state.valueToAdd,
+    });
   };
 
   return (
