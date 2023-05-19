@@ -104,7 +104,7 @@ const CounterPage = ({ initialCount }) => {
         </Button>
       </div>
       <form>
-        <label>Add a lot!</label>
+        <label>Number to add or remove!</label>
         <input
           value={state.valueToAdd || ""}
           onChange={handleChange}
