@@ -28,6 +28,13 @@ const reducer = (state, action) => {
       valueToAdd: 0,
     };
   }
+  if (action.type === "remove-alot") {
+    return {
+      ...state,
+      count: state.count - action.payload,
+      valueToAdd: 0,
+    };
+  }
 
   return state;
 };
@@ -76,6 +83,15 @@ const CounterPage = ({ initialCount }) => {
     });
   };
 
+  const handleRemove = (event) => {
+    event.preventDefault();
+
+    dispatch({
+      type: "remove-alot",
+      payload: state.valueToAdd,
+    });
+  };
+
   return (
     <Panel className="m-3">
       <h1 className="text-lg"> Count is {state.count}</h1>
@@ -87,7 +103,7 @@ const CounterPage = ({ initialCount }) => {
           decrement
         </Button>
       </div>
-      <form onSubmit={handleSubmit}>
+      <form>
         <label>Add a lot!</label>
         <input
           value={state.valueToAdd || ""}
@@ -95,7 +111,14 @@ const CounterPage = ({ initialCount }) => {
           type="number"
           className="p-1 m-3 bg-gray-50 border border-gray-300"
         />
-        <Button outblue>Add it</Button>
+        <div className="flex flex-row gap-1">
+          <Button type="submit" onClick={handleSubmit} outblue>
+            Add it
+          </Button>
+          <Button type="submit" onClick={handleRemove} outblue>
+            Remove it
+          </Button>
+        </div>
       </form>
     </Panel>
   );
