@@ -21,7 +21,8 @@ const CounterPage = ({ initialCount }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setCount(valueToAdd);
+    setCount(count + valueToAdd);
+    setValueToAdd(0);
   };
 
   return (
