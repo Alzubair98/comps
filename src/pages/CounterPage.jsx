@@ -3,15 +3,24 @@ import { useState, useReducer } from "react";
 import Panel from "../component/Panel";
 
 const reducer = (state, action) => {
-  return {
-    ...state,
-    count: state.count + 1,
-  };
+  if (action.type === "increment-count") {
+    return {
+      ...state,
+      count: state.count + 1,
+    };
+  } else if (action.type === "decrement-count") {
+    return {
+      ...state,
+      count: state.count - 1,
+    };
+  }
 };
 
 const CounterPage = ({ initialCount }) => {
   // const [count, setCount] = useState(initialCount);
   // const [valueToAdd, setValueToAdd] = useState(0);
+
+  // instead of multipale useState we can use useReducer
   const [state, dispatch] = useReducer(reducer, {
     count: initialCount,
     valueToAdd: 0,
@@ -19,11 +28,16 @@ const CounterPage = ({ initialCount }) => {
 
   const increment = () => {
     //setCount(count + 1);
-    dispatch();
+    dispatch({
+      type: "increment-count",
+    });
   };
 
   const decrement = () => {
     //setCount(count - 1);
+    dispatch({
+      type: "decrement-count",
+    });
   };
 
   const handleChange = (event) => {
