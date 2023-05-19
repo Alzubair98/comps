@@ -2,33 +2,39 @@ import Button from "../component/Button";
 import { useReducer } from "react";
 import Panel from "../component/Panel";
 
+const INCREMENT_COUNT = "increment";
+const DECREMENT_COUNT = "decrement-count";
+const CHANGE_VALUE = "change-value";
+const ADD_ALOT = "add-alot";
+const REMOVE_ALOT = "remove-alot";
+
 const reducer = (state, action) => {
-  if (action.type === "increment-count") {
+  if (action.type === INCREMENT_COUNT) {
     return {
       ...state,
       count: state.count + 1,
     };
   }
-  if (action.type === "decrement-count") {
+  if (action.type === DECREMENT_COUNT) {
     return {
       ...state,
       count: state.count - 1,
     };
   }
-  if (action.type === "change-value") {
+  if (action.type === CHANGE_VALUE) {
     return {
       ...state,
       valueToAdd: action.payload,
     };
   }
-  if (action.type === "add-alot") {
+  if (action.type === ADD_ALOT) {
     return {
       ...state,
       count: state.count + action.payload,
       valueToAdd: 0,
     };
   }
-  if (action.type === "remove-alot") {
+  if (action.type === REMOVE_ALOT) {
     return {
       ...state,
       count: state.count - action.payload,
@@ -48,13 +54,13 @@ const CounterPage = ({ initialCount }) => {
 
   const increment = () => {
     dispatch({
-      type: "increment-count",
+      type: INCREMENT_COUNT,
     });
   };
 
   const decrement = () => {
     dispatch({
-      type: "decrement-count",
+      type: DECREMENT_COUNT,
     });
   };
 
@@ -62,7 +68,7 @@ const CounterPage = ({ initialCount }) => {
     const value = parseInt(event.target.value) || 0;
 
     dispatch({
-      type: "change-value",
+      type: CHANGE_VALUE,
       payload: value,
     });
   };
@@ -71,7 +77,7 @@ const CounterPage = ({ initialCount }) => {
     event.preventDefault();
 
     dispatch({
-      type: "add-alot",
+      type: ADD_ALOT,
       payload: state.valueToAdd,
     });
   };
@@ -80,7 +86,7 @@ const CounterPage = ({ initialCount }) => {
     event.preventDefault();
 
     dispatch({
-      type: "remove-alot",
+      type: REMOVE_ALOT,
       payload: state.valueToAdd,
     });
   };
