@@ -2,7 +2,12 @@ import Button from "../component/Button";
 import { useState, useReducer } from "react";
 import Panel from "../component/Panel";
 
-const reducer = (state, action) => {};
+const reducer = (state, action) => {
+  return {
+    ...state,
+    count: state.count + 1,
+  };
+};
 
 const CounterPage = ({ initialCount }) => {
   // const [count, setCount] = useState(initialCount);
@@ -14,6 +19,7 @@ const CounterPage = ({ initialCount }) => {
 
   const increment = () => {
     //setCount(count + 1);
+    dispatch();
   };
 
   const decrement = () => {
