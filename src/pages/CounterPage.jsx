@@ -31,14 +31,14 @@ const reducer = (state, action) => {
     case ADD_ALOT:
       return {
         ...state,
-        count: state.count + action.payload,
+        count: state.count + state.valueToAdd,
         valueToAdd: 0,
       };
 
     case REMOVE_ALOT:
       return {
         ...state,
-        count: state.count - action.payload,
+        count: state.count - state.valueToAdd,
         valueToAdd: 0,
       };
 
@@ -80,7 +80,6 @@ const CounterPage = ({ initialCount }) => {
 
     dispatch({
       type: ADD_ALOT,
-      payload: state.valueToAdd,
     });
   };
 
@@ -89,7 +88,6 @@ const CounterPage = ({ initialCount }) => {
 
     dispatch({
       type: REMOVE_ALOT,
-      payload: state.valueToAdd,
     });
   };
 
