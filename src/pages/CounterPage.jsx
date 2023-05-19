@@ -21,7 +21,7 @@ const reducer = (state, action) => {
       valueToAdd: action.payload,
     };
   }
-  if (action.type === "update-count") {
+  if (action.type === "add-alot") {
     return {
       ...state,
       count: state.count + action.payload,
@@ -71,7 +71,7 @@ const CounterPage = ({ initialCount }) => {
     event.preventDefault();
 
     dispatch({
-      type: "update-count",
+      type: "add-alot",
       payload: state.valueToAdd,
     });
   };
