@@ -1,3 +1,4 @@
+import { produce } from "immer";
 import Button from "../component/Button";
 import { useReducer } from "react";
 import Panel from "../component/Panel";
@@ -11,12 +12,12 @@ const REMOVE_ALOT = "remove-alot";
 const reducer = (state, action) => {
   switch (action.type) {
     case INCREMENT_COUNT:
-      return {
-        ...state,
-        count: state.count + 1,
-      };
+      // easy way with immer
+      state.count = state.count + 1;
+      return;
 
     case DECREMENT_COUNT:
+      // normal way without immer
       return {
         ...state,
         count: state.count - 1,
@@ -29,11 +30,9 @@ const reducer = (state, action) => {
       };
 
     case ADD_ALOT:
-      return {
-        ...state,
-        count: state.count + state.valueToAdd,
-        valueToAdd: 0,
-      };
+      state.count = state.count + state.valueToAdd;
+      state.valueToAdd = 0;
+      return;
 
     case REMOVE_ALOT:
       return {
@@ -49,7 +48,8 @@ const reducer = (state, action) => {
 
 const CounterPage = ({ initialCount }) => {
   // instead of multipale useState we can use useReducer
-  const [state, dispatch] = useReducer(reducer, {
+  // going to use immer to make it easy to use reducer
+  const [state, dispatch] = useReducer(produce(reducer), {
     count: initialCount,
     valueToAdd: 0,
   });
