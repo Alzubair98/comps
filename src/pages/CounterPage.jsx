@@ -40,9 +40,6 @@ const reducer = (state, action) => {
 };
 
 const CounterPage = ({ initialCount }) => {
-  // const [count, setCount] = useState(initialCount);
-  // const [valueToAdd, setValueToAdd] = useState(0);
-
   // instead of multipale useState we can use useReducer
   const [state, dispatch] = useReducer(reducer, {
     count: initialCount,
@@ -50,14 +47,12 @@ const CounterPage = ({ initialCount }) => {
   });
 
   const increment = () => {
-    //setCount(count + 1);
     dispatch({
       type: "increment-count",
     });
   };
 
   const decrement = () => {
-    //setCount(count - 1);
     dispatch({
       type: "decrement-count",
     });
@@ -65,17 +60,15 @@ const CounterPage = ({ initialCount }) => {
 
   const handleChange = (event) => {
     const value = parseInt(event.target.value) || 0;
-    //setValueToAdd(value);
+
     dispatch({
       type: "change-value",
       payload: value,
     });
   };
 
-  const handleSubmit = (event) => {
+  const handleAdd = (event) => {
     event.preventDefault();
-    //setCount(count + valueToAdd);
-    //setValueToAdd(0);
 
     dispatch({
       type: "update-count",
@@ -112,7 +105,7 @@ const CounterPage = ({ initialCount }) => {
           className="p-1 m-3 bg-gray-50 border border-gray-300"
         />
         <div className="flex flex-row gap-1">
-          <Button type="submit" onClick={handleSubmit} outblue>
+          <Button type="submit" onClick={handleAdd} outblue>
             Add it
           </Button>
           <Button type="submit" onClick={handleRemove} outblue>
